@@ -1,0 +1,9 @@
+# MyFilter.list — Quantumult X 分流规则（URL Rewrite 请放在 Rewrite/）
+# QQ 音乐：仅选择专用广告投放/素材域名，暂不封锁统计、通用腾讯 SDK 或音乐业务域名。
+# Source: https://github.com/zqzess/rule_for_quantumultX/blob/master/QuantumultX/snippet/QMusicAd.snippet
+# 注意：仅提供网络请求拦截，不保证去除所有首页会员营销卡片；异常时停用并测试。
+DOMAIN,ad.tencentmusic.com,REJECT
+DOMAIN,adcdn.tencentmusic.com,REJECT
+DOMAIN,adexpo.tencentmusic.com,REJECT
+DOMAIN,adclick.tencentmusic.com,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
