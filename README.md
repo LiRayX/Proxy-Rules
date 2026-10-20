@@ -11,12 +11,12 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.co
 ## 独立分流订阅（QQ 音乐）
 
 ```text
-https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Fliter/MyFilter.list
+https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.list
 ```
-在 Quantumult X 的「分流 → 规则资源」中添加上述地址，选择与文件中 REJECT 相容的拒绝策略。注意仓库目录名按要求为 `Fliter`（不是 `Filter`）。
+在 Quantumult X 的「分流 → 规则资源」中添加上述地址，选择与文件中 REJECT 相容的拒绝策略。注意仓库目录名按要求为 `Filter`。
 
 - `Rewrite/MyAds.conf`：包含 QQ 音乐 Moli `t_splash_info` 开屏素材重写，需 MITM。
-- `Fliter/MyFilter.list`：QQ 音乐 5 条明确的广告域名分流；无需 MITM，暂不加通用腾讯域名或统计域名。
+- `Filter/MyFilter.list`：QQ 音乐 5 条明确的广告域名分流；无需 MITM，暂不加通用腾讯域名或统计域名。
 - 不保证屏蔽 QQ 音乐全部内部营销内容；如影响正常加载，先停用对应订阅排查。
 
 ## 覆盖状态（2026-10-20）
