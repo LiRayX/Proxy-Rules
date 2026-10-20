@@ -29,7 +29,8 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 
 | App | 状态 | 说明 |
 |---|---|---|
-| 京东、携程 | 保留原有 | 京东仍可能无法去开屏；携程存在 MITM 限制 |
+| 京东 | 保留原有 | 仍可能无法去开屏 |
+| 携程 | 用户实测有效（新增两条组合） | 新增 `getAdsList`、`scjson/tripAds`，保留原 `json/tripAds`；需持续观察机票酒店订单功能 |
 | 淘宝 | 已整合 Moli 非脚本规则 | 从 Moli ADBlock.conf 直接筛选淘宝相关 reject-dict 规则，并保留单独开屏 reject；其 RuCu6 脚本链接当前 404，未接入 |
 | 拼多多 | 已加入 | 精准 splash 接口 |
 | 美团 | 已加入 | 美团外卖启动请求；可能不覆盖美团主 App |
@@ -61,6 +62,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 6. 当前为**人工维护**，不会自动同步上游。
 
 ## 来源
+- [leqwq QuantumultX / chongxie.txt](https://github.com/leqwq/QuantumultX/blob/main/chongxie.txt)（携程新增两条）
 - [guardiora / QuantumultX Rewrite.conf](https://github.com/guardiora/QuantumultX/blob/master/X/Rewrite.conf)（招商银行前三条）
 - [Zirawell R-Store — 库迪咖啡小程序配置](https://github.com/zirawell/R-Store/tree/main/Rule/QuanX/Adblock/Applet/Wechat/K)（合并英文域名规则，避免中文订阅路径）
 - [Zirawell Cotti 脚本](https://github.com/zirawell/R-Store/blob/main/Res/Scripts/AntiAd/cotti.js)（第三方 JS；需实机验证）
