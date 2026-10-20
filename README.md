@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | App | 状态 | 说明 |
 |---|---|---|
 | 京东、携程 | 保留原有 | 京东仍可能无法去开屏；携程存在 MITM 限制 |
-| 淘宝 | 已补充 Moli 开屏专项 | 保留原 `getadv`，加入 `splash.awesome.get`、`tao_splash` 及 Moli 的 `o2o.ad.*`、`etao_advertise`、`newface.awesome.get` 等；待实机验证 |
+| 淘宝 | 已整合 Moli 非脚本规则 | 从 Moli ADBlock.conf 直接筛选淘宝相关 reject-dict 规则，并保留单独开屏 reject；其 RuCu6 脚本链接当前 404，未接入 |
 | 拼多多 | 已加入 | 精准 splash 接口 |
 | 美团 | 已加入 | 美团外卖启动请求；可能不覆盖美团主 App |
 | 去哪儿 | 已加入 | 两个开屏接口 |
@@ -41,6 +41,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | 微博、爱奇艺 | 待验证 | 涉及外部 JS 或较宽泛图片规则；未直接照搬 |
 
 ## 淘宝补充说明
+2026-10-20：用 Moli `Rewrite/ADBlock.conf` 淘宝区块中的非脚本规则替换此前分散添加的淘宝规则，保留 `Startup.conf` 明确的 `splash.awesome.get` 规则。Moli 依赖的 RuCu6 `myBlockAds.js` 地址返回 404，未直接复用该两条脚本规则；因此目前并非完整照搬 Moli 的响应体方案。
 2026-10-20 新增四条 Moli 精准接口规则。没有引入 RuCu6 的外部 `myBlockAds.js` 脚本，也没有屏蔽 `acs.m.taobao.com` 整个域名。`newface.awesome.get` 属于启动页配置接口，若首页功能异常可优先停用这一条。与墨鱼等其他订阅命中相同 URL 时，须检查 QX 匹配先后；广告已缓存或采用其他接口时，本次增补也可能无效。
 
 ## 安全与维护
