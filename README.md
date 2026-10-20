@@ -38,6 +38,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | Keep | 已加入 | 广告预加载、广告接口和会员引导弹窗 |
 | 小红书、高德地图、知乎 | 交由墨鱼专项规则 | 本仓库不重复添加 |
 | 哔哩哔哩 | 已加入（开屏专项） | Moli `/x/v2/splash/show` + app2smile `/x/v2/splash/list` 响应体处理；可能与墨鱼 B 站专项规则冲突，需测试 |
+| 招商银行 App | 用户实测有效（前三条组合） | `mlife.cmbchina.com` 两条广告接口及 `pic1cdn.cmbchina.com/appinitads/`，登录转账等需继续观察；未加入第四条 |
 | QQ 音乐 | 已加入 | 开屏图片重写 1 条，广告域名分流 5 条；待实机验证 |
 | 库迪咖啡微信小程序 | 已加入（待验证） | Zirawell 专项三条：广告位置、排序及首页登录提示；使用外部 JS，需确认点单/支付正常 |
 | 微信 | 已加入（实验） | 仅公众号文章 getappmsgad，可能无法替代原规则的响应体精修 |
@@ -60,6 +61,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 6. 当前为**人工维护**，不会自动同步上游。
 
 ## 来源
+- [guardiora / QuantumultX Rewrite.conf](https://github.com/guardiora/QuantumultX/blob/master/X/Rewrite.conf)（招商银行前三条）
 - [Zirawell R-Store — 库迪咖啡小程序配置](https://github.com/zirawell/R-Store/tree/main/Rule/QuanX/Adblock/Applet/Wechat/K)（合并英文域名规则，避免中文订阅路径）
 - [Zirawell Cotti 脚本](https://github.com/zirawell/R-Store/blob/main/Res/Scripts/AntiAd/cotti.js)（第三方 JS；需实机验证）
 - [app2smile bilibili-json.js](https://github.com/app2smile/rules/blob/master/js/bilibili-json.js)（B站开屏 list）
