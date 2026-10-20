@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | 12306 | 已加入（实验） | 广告服务 getAdList，优先测试正常页面；原源使用 JS，本仓库改用 reject-200，响应结构可能不同 |
 | Keep | 已加入 | 广告预加载、广告接口和会员引导弹窗 |
 | 小红书、高德地图、知乎 | 交由墨鱼专项规则 | 本仓库不重复添加 |
-| 哔哩哔哩 | 已加入（开屏专项） | Moli `/x/v2/splash/show`；可能与墨鱼 B 站专项规则冲突，需测试 |
+| 哔哩哔哩 | 已加入（开屏专项） | Moli `/x/v2/splash/show` + app2smile `/x/v2/splash/list` 响应体处理；可能与墨鱼 B 站专项规则冲突，需测试 |
 | QQ 音乐 | 已加入 | 开屏图片重写 1 条，广告域名分流 5 条；待实机验证 |
 | 微信 | 已加入（实验） | 仅公众号文章 getappmsgad，可能无法替代原规则的响应体精修 |
 | 天猫 | 待验证 | 与淘宝共享广告生态，不代表天猫主 App 已覆盖 |
@@ -52,6 +52,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 6. 当前为**人工维护**，不会自动同步上游。
 
 ## 来源
+- [app2smile bilibili-json.js](https://github.com/app2smile/rules/blob/master/js/bilibili-json.js)（B站开屏 list）
 - [zqzess QQ 音乐专属 QMusicAd.snippet](https://github.com/zqzess/rule_for_quantumultX/blob/master/QuantumultX/snippet/QMusicAd.snippet)
 - [Moli-X ADBlock.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/ADBlock.conf)（QQ 音乐开屏素材）
 - [Moli-X/Resources — Startup.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/Startup.conf)（淘宝 `splash.awesome.get`）
