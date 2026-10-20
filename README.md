@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | App | 状态 | 说明 |
 |---|---|---|
 | 京东、携程 | 保留原有 | 京东仍可能无法去开屏；携程存在 MITM 限制 |
-| 淘宝 | 已补充 Moli 开屏专项 | 保留原 `getadv`，加入 `splash.awesome.get` 与 `tao_splash`；待实机验证 |
+| 淘宝 | 已补充 Moli 开屏专项 | 保留原 `getadv`，加入 `splash.awesome.get`、`tao_splash` 及 Moli 的 `o2o.ad.*`、`etao_advertise`、`newface.awesome.get` 等；待实机验证 |
 | 拼多多 | 已加入 | 精准 splash 接口 |
 | 美团 | 已加入 | 美团外卖启动请求；可能不覆盖美团主 App |
 | 去哪儿 | 已加入 | 两个开屏接口 |
@@ -39,6 +39,9 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | 滴滴出行、盒马 | 待验证 | 尚未确认安全的开屏广告接口 |
 | 飞猪 | 待验证 | 源中只有 CDN 图片正则；误伤概率高，暂不加入 |
 | 微博、爱奇艺 | 待验证 | 涉及外部 JS 或较宽泛图片规则；未直接照搬 |
+
+## 淘宝补充说明
+2026-10-20 新增四条 Moli 精准接口规则。没有引入 RuCu6 的外部 `myBlockAds.js` 脚本，也没有屏蔽 `acs.m.taobao.com` 整个域名。`newface.awesome.get` 属于启动页配置接口，若首页功能异常可优先停用这一条。与墨鱼等其他订阅命中相同 URL 时，须检查 QX 匹配先后；广告已缓存或采用其他接口时，本次增补也可能无效。
 
 ## 安全与维护
 1. 本配置不承诺 20 个 App 都已实现去广告。优先避免影响机票、酒店、付款、订单、地图等核心功能。
