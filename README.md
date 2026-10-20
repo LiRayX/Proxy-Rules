@@ -19,6 +19,12 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 - `Filter/MyFilter.list`：QQ 音乐 5 条明确的广告域名分流；无需 MITM，暂不加通用腾讯域名或统计域名。
 - 不保证屏蔽 QQ 音乐全部内部营销内容；如影响正常加载，先停用对应订阅排查。
 
+## 第三方规则统一索引
+
+[Config/RewriteRemote.conf](Config/RewriteRemote.conf) 是 **QX 主配置 `[rewrite_remote]` 的模板片段**，集中记录自定义规则与已核实路径的墨鱼专项重写。它**不是**可在「重写 → 引用」中直接导入的嵌套订阅。QX 不会从远程重写文件中递归读取其他配置。
+
+使用方式：只将模板中的 URL 订阅行复制到主配置已有的 `[rewrite_remote]` 分区，或对照模板逐一在 QX 的「重写 → 引用」添加。**已经启用的第三方订阅不要重复添加**。截图中未核实完整地址的其他订阅保持原状。外部规则在作者仓库更新，不随本索引自动镜像。
+
 ## 覆盖状态（2026-10-20）
 
 | App | 状态 | 说明 |
