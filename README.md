@@ -8,6 +8,17 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.co
 ```
 在 QX「重写 → 引用」导入。**不要**把它当作完整主配置，也不要添加 `[rewrite_local]` / `[mitm]`。确认 MITM 证书、主机名和重写总开关。
 
+## 独立分流订阅（QQ 音乐）
+
+```text
+https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Fliter/MyFilter.list
+```
+在 Quantumult X 的「分流 → 规则资源」中添加上述地址，选择与文件中 REJECT 相容的拒绝策略。注意仓库目录名按要求为 `Fliter`（不是 `Filter`）。
+
+- `Rewrite/MyAds.conf`：包含 QQ 音乐 Moli `t_splash_info` 开屏素材重写，需 MITM。
+- `Fliter/MyFilter.list`：QQ 音乐 5 条明确的广告域名分流；无需 MITM，暂不加通用腾讯域名或统计域名。
+- 不保证屏蔽 QQ 音乐全部内部营销内容；如影响正常加载，先停用对应订阅排查。
+
 ## 覆盖状态（2026-10-20）
 
 | App | 状态 | 说明 |
@@ -21,6 +32,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.co
 | Keep | 已加入 | 广告预加载、广告接口和会员引导弹窗 |
 | 小红书、高德地图、知乎 | 交由墨鱼专项规则 | 本仓库不重复添加 |
 | 哔哩哔哩 | 已加入（开屏专项） | Moli `/x/v2/splash/show`；可能与墨鱼 B 站专项规则冲突，需测试 |
+| QQ 音乐 | 已加入 | 开屏图片重写 1 条，广告域名分流 5 条；待实机验证 |
 | 微信 | 已加入（实验） | 仅公众号文章 getappmsgad，可能无法替代原规则的响应体精修 |
 | 天猫 | 待验证 | 与淘宝共享广告生态，不代表天猫主 App 已覆盖 |
 | 航旅纵横 | 已加入（素材级） | 仅拦截 `img.umetrip.com/fs/advert/`，不拦截 native 接口；需实机验证 |
@@ -37,6 +49,8 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.co
 6. 当前为**人工维护**，不会自动同步上游。
 
 ## 来源
+- [zqzess QQ 音乐专属 QMusicAd.snippet](https://github.com/zqzess/rule_for_quantumultX/blob/master/QuantumultX/snippet/QMusicAd.snippet)
+- [Moli-X ADBlock.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/ADBlock.conf)（QQ 音乐开屏素材）
 - [Moli-X/Resources — Startup.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/Startup.conf)（淘宝 `splash.awesome.get`）
 - [Moli-X/Resources — ADBlock.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/ADBlock.conf)（淘宝 `tao_splash`）
 - [Moli-X/Resources — AD_Bilibili.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/Bilibili/AD_Bilibili.conf)（只提取 splash/show）
