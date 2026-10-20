@@ -33,6 +33,7 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 | 小红书、高德地图、知乎 | 交由墨鱼专项规则 | 本仓库不重复添加 |
 | 哔哩哔哩 | 已加入（开屏专项） | Moli `/x/v2/splash/show` + app2smile `/x/v2/splash/list` 响应体处理；可能与墨鱼 B 站专项规则冲突，需测试 |
 | QQ 音乐 | 已加入 | 开屏图片重写 1 条，广告域名分流 5 条；待实机验证 |
+| 库迪咖啡微信小程序 | 已加入（待验证） | Zirawell 专项三条：广告位置、排序及首页登录提示；使用外部 JS，需确认点单/支付正常 |
 | 微信 | 已加入（实验） | 仅公众号文章 getappmsgad，可能无法替代原规则的响应体精修 |
 | 天猫 | 待验证 | 与淘宝共享广告生态，不代表天猫主 App 已覆盖 |
 | 航旅纵横 | 已加入（素材级） | 仅拦截 `img.umetrip.com/fs/advert/`，不拦截 native 接口；需实机验证 |
@@ -53,6 +54,8 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.
 6. 当前为**人工维护**，不会自动同步上游。
 
 ## 来源
+- [Zirawell R-Store — 库迪咖啡小程序配置](https://github.com/zirawell/R-Store/tree/main/Rule/QuanX/Adblock/Applet/Wechat/K)（合并英文域名规则，避免中文订阅路径）
+- [Zirawell Cotti 脚本](https://github.com/zirawell/R-Store/blob/main/Res/Scripts/AntiAd/cotti.js)（第三方 JS；需实机验证）
 - [app2smile bilibili-json.js](https://github.com/app2smile/rules/blob/master/js/bilibili-json.js)（B站开屏 list）
 - [zqzess QQ 音乐专属 QMusicAd.snippet](https://github.com/zqzess/rule_for_quantumultX/blob/master/QuantumultX/snippet/QMusicAd.snippet)
 - [Moli-X ADBlock.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/ADBlock.conf)（QQ 音乐开屏素材）
