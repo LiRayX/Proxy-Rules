@@ -12,7 +12,8 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.co
 
 | App | 状态 | 说明 |
 |---|---|---|
-| 京东、淘宝、携程 | 保留原有 | 旧规则原样保留；京东仍可能无法去开屏；携程存在 MITM 限制 |
+| 京东、携程 | 保留原有 | 京东仍可能无法去开屏；携程存在 MITM 限制 |
+| 淘宝 | 已补充 Moli 开屏专项 | 保留原 `getadv`，加入 `splash.awesome.get` 与 `tao_splash`；待实机验证 |
 | 拼多多 | 已加入 | 精准 splash 接口 |
 | 美团 | 已加入 | 美团外卖启动请求；可能不覆盖美团主 App |
 | 去哪儿 | 已加入 | 两个开屏接口 |
@@ -36,6 +37,8 @@ https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.co
 6. 当前为**人工维护**，不会自动同步上游。
 
 ## 来源
+- [Moli-X/Resources — Startup.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/Startup.conf)（淘宝 `splash.awesome.get`）
+- [Moli-X/Resources — ADBlock.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/ADBlock.conf)（淘宝 `tao_splash`）
 - [Moli-X/Resources — AD_Bilibili.conf](https://github.com/Moli-X/Resources/blob/main/Rewrite/Bilibili/AD_Bilibili.conf)（只提取 splash/show）
 - [zwf234/rules — tailadv.conf](https://github.com/zwf234/rules/blob/master/QuantumultX/tailadv.conf)
 - [墨鱼去开屏2.0 — 官方入口](https://ddgksf2013.top/rewrite/StartUpAds.conf)
