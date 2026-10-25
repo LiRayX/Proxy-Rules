@@ -7,21 +7,21 @@
 - [QX/Config/RewriteRemote.conf](QX/Config/RewriteRemote.conf)：QX 主配置片段参考，不可直接作为远程重写订阅。
 - [Loon/meituan.lpx](Loon/meituan.lpx)：Loon 美团插件（UTF-8）。
 
-旧的 `Rewrite/`、`Filter/`、`Config/` 路径暂时保留，用于兼容已安装的 QX 订阅。建议新订阅使用 `QX/` 下的文件。仓库计划由 `QuantumultX-Rules` 更名为 `Proxy-Rules`，更名操作须在 GitHub 仓库 Settings → General → Repository name 中完成。
+旧的根目录 `Rewrite/`、`Filter/`、`Config/` 已删除；请统一使用 `QX/` 目录。
 
 
 Quantumult X 远程重写引用：保留京东、淘宝、携程原规则，逐步整合其他指定 App 的**精确广告接口**。仅为社区规则整理，尚未经最新 App 实机验证。
 
 ## QX 订阅
 ```text
-https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Rewrite/MyAds.conf
+https://raw.githubusercontent.com/LiRayX/Proxy-Rules/main/QX/Rewrite/MyAds.conf
 ```
 在 QX「重写 → 引用」导入。**不要**把它当作完整主配置，也不要添加 `[rewrite_local]` / `[mitm]`。确认 MITM 证书、主机名和重写总开关。
 
 ## 独立分流订阅（QQ 音乐）
 
 ```text
-https://raw.githubusercontent.com/LiRayX/QuantumultX-Rules/main/Filter/MyFilter.list
+https://raw.githubusercontent.com/LiRayX/Proxy-Rules/main/QX/Filter/MyFilter.list
 ```
 在 Quantumult X 的「分流 → 规则资源」中添加上述地址，选择与文件中 REJECT 相容的拒绝策略。注意仓库目录名按要求为 `Filter`。
 
