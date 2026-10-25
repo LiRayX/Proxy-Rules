@@ -1,4 +1,14 @@
-# QuantumultX-Rules
+# Proxy-Rules / QuantumultX-Rules
+
+## 目录结构（2026-10-26）
+
+- [QX/Rewrite/MyAds.conf](QX/Rewrite/MyAds.conf)：Quantumult X 远程重写订阅。
+- [QX/Filter/MyFilter.list](QX/Filter/MyFilter.list)：Quantumult X 分流规则。
+- [QX/Config/RewriteRemote.conf](QX/Config/RewriteRemote.conf)：QX 主配置片段参考，不可直接作为远程重写订阅。
+- [Loon/meituan.lpx](Loon/meituan.lpx)：Loon 美团插件（UTF-8）。
+
+旧的 `Rewrite/`、`Filter/`、`Config/` 路径暂时保留，用于兼容已安装的 QX 订阅。建议新订阅使用 `QX/` 下的文件。仓库计划由 `QuantumultX-Rules` 更名为 `Proxy-Rules`，更名操作须在 GitHub 仓库 Settings → General → Repository name 中完成。
+
 
 Quantumult X 远程重写引用：保留京东、淘宝、携程原规则，逐步整合其他指定 App 的**精确广告接口**。仅为社区规则整理，尚未经最新 App 实机验证。
 
