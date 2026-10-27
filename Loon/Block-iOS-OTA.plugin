@@ -1,0 +1,15 @@
+#!name=Block iOS OTA Updates
+#!desc=Block iOS/iPadOS software update catalog checks and OTA package downloads. No MITM required.
+#!author=LiRayX
+#!homepage=https://github.com/LiRayX/Proxy-Rules
+
+# Apple software update catalogs
+# Apple reference: https://support.apple.com/en-us/101555
+[Rule]
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+
+# OTA update package delivery
+DOMAIN,appldnld.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,updates.cdn-apple.com,REJECT
