@@ -1,0 +1,8 @@
+#!name = 库迪咖啡抓包（临时）
+#!desc = 仅为库迪咖啡独立 App 的 capi/access 接口开启 HTTPS 解密；不屏蔽广告。抓包完成后建议关闭。
+#!author = LiRayX
+#!date = 2026-10-29
+#!tag = 抓包,库迪咖啡,临时
+
+[Mitm]
+hostname = capi.cotticoffee.com, access.cotticoffee.com
