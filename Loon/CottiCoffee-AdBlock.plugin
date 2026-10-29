@@ -1,8 +1,9 @@
-#!name = 库迪咖啡去广告（保守实验版）
-#!desc = 仅拦截 adSortList，不拦截 position/list；优先避免影响登录和点单。去开屏效果未验证。
+#!name = 库迪咖啡去广告（正式版）
+#!icon = https://commons.wikimedia.org/wiki/Special:FilePath/Cotti_Coffee_logo.png
+#!desc = 库迪咖啡独立 App 去广告；保留已验证正常使用的单接口拦截规则
 #!author = LiRayX
 #!date = 2026-10-29
-#!tag = 库迪咖啡,保守,实验
+#!tag = 库迪咖啡,去广告,正式版
 
 [Rewrite]
 ^https:\/\/capi\.cotticoffee\.com\/cotti-capi\/customer\/position\/adSortList(?:\?.*)?$ - reject-dict
