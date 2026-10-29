@@ -1,0 +1,10 @@
+#!name = 库迪咖啡开屏广告拦截（实验版）
+#!desc = 仅测试屏蔽库迪独立 App 的 adSortList 请求；可能无效或影响初始化，可随时停用
+#!author = LiRayX
+#!date = 2026-10-29
+
+[Rewrite]
+^https:\/\/capi\.cotticoffee\.com\/cotti-capi\/customer\/position\/adSortList(?:\?.*)?$ - reject-dict
+
+[Mitm]
+hostname = capi.cotticoffee.com
