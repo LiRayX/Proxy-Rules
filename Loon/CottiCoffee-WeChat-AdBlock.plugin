@@ -1,0 +1,18 @@
+#!name = 库迪咖啡微信小程序去广告
+#!desc = 过滤库迪咖啡微信小程序广告；与库迪咖啡独立 App 插件互不影响。需要 Loon Build 988+。
+#!author = Zirawell (原始规则及算法), LiRayX (Loon 适配)
+#!homepage = https://github.com/LiRayX/Proxy-Rules
+#!icon = https://raw.githubusercontent.com/LiRayX/Proxy-Rules/main/Loon/CottiCoffee.svg
+#!date = 2026-11-06
+#!tag = 库迪咖啡,微信小程序,去广告
+
+# Source: https://github.com/zirawell/R-Store
+# AES-CBC request classification adapted from original cotti.js
+[Script]
+http-request ^https?:\/\/gateway\.cotticoffee\.com\/cotti-capi\/customer\/position\/list(?:\?.*)?$ script-path=https://raw.githubusercontent.com/LiRayX/Proxy-Rules/main/Loon/Scripts/cotti-wechat.js,requires-body=true,timeout=10,tag=库迪小程序广告请求过滤,enable=true
+
+[Rewrite]
+^https?:\/\/gateway\.cotticoffee\.com\/cotti-capi\/customer\/position\/adSortList(?:\?.*)?$ reject-dict
+
+[Mitm]
+hostname = gateway.cotticoffee.com
